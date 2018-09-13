@@ -5,8 +5,9 @@ ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use sqlite3 and postgres as the database for Active Record
+gem 'sqlite3', group: :development
+gem 'pg', '0.18.1', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -24,6 +25,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
+
+gem 'rails_12factor', group: :production
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
