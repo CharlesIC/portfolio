@@ -31,6 +31,13 @@ html {
     width: 100%
 }
 
+img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+ }
+
 .container {
     padding: 0 200px 0 280px;
     width: 100%
