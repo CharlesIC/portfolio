@@ -21,8 +21,8 @@
                   <ul>
                       <li><%= link_to "Welcome", root_path %></li>
                       <li><%= link_to "Portfolio", portfolio_path %></li>
-                      <li><a href="https://medium.com/@CharlesIC" target="_blank">Blog</a></li>
                       <li><%= link_to "About", about_path %></li>
+                      <li><a target="_blank" href="https://medium.com/@CharlesIC">Blog</a></li>
                       <li><%= link_to "Contact", contact_path %></li>
                   </ul>
               </div>
@@ -37,11 +37,7 @@
 
   <div class="footer">
     <div class="container">
-        <ul class="social_media <%= hide_social_media? ? "invisible" : "visible" %>">
-            <li><a class="github" href="#">github</a></li>
-            <li><a class="linkedin" href="#">linkedin</a></li>
-            <li><a class="twitter" href="#">twitter</a></li>
-        </ul>
+        <%= render 'shared/social_media', invisible: hide_social_media? %>
         <p> 2018 Charles Gancarz</p>
     </div>
   </div>
