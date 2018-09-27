@@ -2,10 +2,14 @@
 
 <% content_for :js do %>
     <script type="text/javascript">
-        var user = 'ckg.hello',
+        $(document).ready(function () {
+            var user = 'ckg.hello',
             domain = 'gmail.com',
             element = document.getElementById('email');
-            element.href = "mailto:" + user + '@' + domain;
+            element.onclick = function() {
+                element.href = 'mailto:' + user + '@' + domain;
+            };
+        });
     </script>
 <% end %>
 
