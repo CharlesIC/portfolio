@@ -1,5 +1,14 @@
 <% content_for :hide_social_media, true %>
 
+<% content_for :js do %>
+    <script type="text/javascript">
+        var user = 'ckg.hello',
+            domain = 'gmail.com',
+            element = document.getElementById('email');
+            element.href = "mailto:" + user + '@' + domain;
+    </script>
+<% end %>
+
 <div class="main contact">
     <div class="container">
         <h2>Get in touch</h2>
@@ -9,7 +18,7 @@
             <div class="col-md-2"><a target="_blank" href="https://twitter.com/_theScorpion_"><i class="fab fa-twitter"></i></a></div>
             <div class="col-md-2"><a target="_blank" href="https://plus.google.com/u/1/107153976934211243601"><i class="fab fa-google-plus"></i></a></div>
             <div class="col-md-2"><a target="_blank" href="https://www.instagram.com/charlesic/"><i class="fab fa-instagram"></i></a></div>
-            <div class="col-md-2"><a target="_blank" href="mailto:ckg.hello@gmail.com"><i class="fas fa-envelope"></i></a></div>
+            <div class="col-md-2"><a id="email" href="#"><i class="fas fa-envelope"></i></a></div>
         </div>
     </div>
 </div>
