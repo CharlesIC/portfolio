@@ -1,15 +1,17 @@
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.slideshow-container').slick({
-            arrows: false,
-            dots: true,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            focusOnSelect: true,
-            fade: true
+<% content_for :js do %>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.slideshow-container').slick({
+                arrows: false,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                focusOnSelect: true,
+                fade: true
+            });
         });
-    });
-</script>
+    </script>
+<% end %>
 
 <div class="main portfolio">
     <div class="jumbotron slideshow">

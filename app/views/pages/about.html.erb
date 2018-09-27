@@ -1,17 +1,19 @@
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.slideshow-container').slick({
-            arrows: false,
-            dots: false,
-            autoplay: true,
-            autoplaySpeed: 6000,
-            focusOnSelect: true,
-            fade: true
-        });
-    });
+<% content_for :js do %>
+    <script>
+        $(document).ready(function () {
+            $('.slideshow-container').slick({
+                arrows: false,
+                dots: false,
+                autoplay: true,
+                autoplaySpeed: 6000,
+                focusOnSelect: true,
+                fade: true
+            });
 
-    twemoji.parse(document.body);
-</script>
+            twemoji.parse(document.body);
+        });
+    </script>
+<% end %>
 
 <div class="main about">
     <div class="container">

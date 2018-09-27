@@ -9,7 +9,7 @@
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
+  <script async src="//twemoji.maxcdn.com/twemoji.min.js"></script>
   <meta charset="UTF-8">
   <%= csrf_meta_tags %>
 </head>
@@ -41,5 +41,8 @@
         <p> 2018 Charles Gancarz</p>
     </div>
   </div>
+
+  <%= yield(:js) if content_for?(:js) %>
+
 </body>
 </html>
