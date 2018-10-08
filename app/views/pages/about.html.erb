@@ -1,25 +1,8 @@
-<% content_for :js do %>
-    <script>
-        $(document).ready(function () {
-            $('.slideshow-container').slick({
-                arrows: false,
-                dots: false,
-                autoplay: true,
-                autoplaySpeed: 6000,
-                focusOnSelect: true,
-                fade: true
-            });
-
-            twemoji.parse(document.body);
-        });
-    </script>
-<% end %>
-
-<div class="main about">
+<div class="main about twemoji">
     <div class="container">
         <div class="row">
             <div class="col-md-6 thumbnail" >
-                <div class="slideshow-container">
+                <%= content_tag :div, class: 'slideshow-container', data: { 'autoplay-speed': 6000 } do %>
                     <img alt="Me" src="<%= image_path('ckg-1.jpg') %>">
                     <img alt="Me" src="<%= image_path('ckg-2.jpg') %>">
                     <img alt="Me" src="<%= image_path('ckg-3.jpg') %>">
@@ -28,7 +11,7 @@
                     <img alt="Me" src="<%= image_path('ckg-6.jpg') %>">
                     <img alt="Me" src="<%= image_path('ckg-7.jpg') %>">
                     <img alt="Me" src="<%= image_path('ckg-8.jpg') %>">
-                </div>
+                <% end %>
             </div>
             <div class="col-md-6">
                 <h2>Hello. My name is <span class="highlight">Charles Gancarz</span></h2>

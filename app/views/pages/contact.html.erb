@@ -1,18 +1,5 @@
 <% content_for :hide_social_media, true %>
 
-<% content_for :js do %>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var user = 'ckg.hello',
-            domain = 'gmail.com',
-            element = document.getElementById('email');
-            element.onclick = function() {
-                element.href = 'mailto:' + user + '@' + domain;
-            };
-        });
-    </script>
-<% end %>
-
 <div class="main contact">
     <div class="container">
         <h2>Get in touch</h2>
